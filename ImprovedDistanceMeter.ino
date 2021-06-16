@@ -23,7 +23,7 @@ void setup() {
  
  Serial.begin(9600);
  
- Serial.print("Temperature calculated on startup: ");
+ Serial.print(F("Temperature calculated on startup: "));
  Serial.println((float)DHT11.temperature);
 }
 
@@ -54,9 +54,9 @@ int echo(){
 
 void printDistance(int distance){
   lcd.clear();
-  lcd.print("Distance: ");
+  lcd.print(F("Distance: "));
   lcd.print(distance);
-  lcd.print("cm");
+  lcd.print(F("cm"));
 }
 
 float getSoundSpeed(){
