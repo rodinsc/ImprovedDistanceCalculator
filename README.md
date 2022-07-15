@@ -4,12 +4,12 @@ Improved Distance Meter is a distance meter for Arduino using HC-SR04, DHT11 sen
 
 ## Calculation of distance
 
-Generally when people use HC-SR04, they do something like:
+Common usage of HC-SR04 when calculating distance is like:
 
 ```cpp
 float distance = (duration/2) / 29.1;
 ```
-The important thing here is the `29.1` value. It is the speed of sound in microseconds/centimeter format. But the temperature of the environment affects that value. So to get distance with more accuracy, we have to change this value according to temperature of the environment.
+The important thing here is the `29.1` value. It is the sound speed in microseconds/centimeter format. But the temperature of the environment affects that value. So to get distance with more accuracy, we need to change this value according to temperature of the environment.
 
 So, to calculate this value, the code simply solves the following equation.
 
